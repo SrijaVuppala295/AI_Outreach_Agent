@@ -1,0 +1,18 @@
+[project]
+name = "hopper"
+version = "0.1"
+description = "An email marketing solution"
+requires-python = ">=3.13"
+dependencies = [
+    "audioop-lts",
+    "generativeai>=0.0.1",
+    "google-generativeai>=0.8.5",
+    "gspread",
+    "openai>=1.104.1",
+    "pandas",
+    "pandas-stubs",
+    "py-cord",
+    "python-dotenv",
+    "requests",
+    "tenacity>=9.1.2",
+]

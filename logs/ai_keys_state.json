@@ -1,0 +1,234 @@
+{
+  "usage": {
+    "gemini_1": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2025-11-15T21:13:24.015098",
+      "last_daily_reset": "2025-11-15"
+    },
+    "gemini_2": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.949656",
+      "last_daily_reset": "2026-01-07"
+    },
+    "gemini_3": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "gemini_4": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "gemini_5": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "gemini_6": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "gemini_7": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "gemini_8": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "gemini_9": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "gemini_10": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "gemini_11": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "gemini_12": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "openrouter_1": {
+      "minute_count": 2,
+      "daily_count": 4,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "openrouter_2": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "openrouter_3": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "openrouter_4": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "openrouter_5": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "openrouter_6": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "openrouter_7": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "openrouter_8": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "openrouter_9": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "openrouter_10": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "openrouter_11": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "openrouter_12": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.952680",
+      "last_daily_reset": "2026-01-07"
+    },
+    "deepseek_1": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-03T14:27:09.360769",
+      "last_daily_reset": "2026-01-03"
+    },
+    "deepseek_2": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "deepseek_3": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "deepseek_4": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "deepseek_5": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "deepseek_6": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "deepseek_7": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.950664",
+      "last_daily_reset": "2026-01-07"
+    },
+    "deepseek_8": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "deepseek_9": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "deepseek_10": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "deepseek_11": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    },
+    "deepseek_12": {
+      "minute_count": 0,
+      "daily_count": 0,
+      "last_minute_reset": "2026-01-07T14:52:52.951682",
+      "last_daily_reset": "2026-01-07"
+    }
+  },
+  "exhausted": [
+    "gemini_1",
+    "deepseek_1"
+  ],
+  "errors": {
+    "gemini_1": {
+      "rate_limit": 1
+    },
+    "deepseek_1": {
+      "api_error": 10
+    }
+  },
+  "last_used_provider": "openrouter",
+  "updated_at": "2026-01-07T14:53:34.135063"
+}

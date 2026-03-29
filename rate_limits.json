@@ -1,0 +1,10 @@
+{
+  "date": "2025-10-13",
+  "accounts": {
+    "gmail_account_1": {
+      "used": 1,
+      "limit": 25,
+      "last_reset": "2025-10-13"
+    }
+  }
+}

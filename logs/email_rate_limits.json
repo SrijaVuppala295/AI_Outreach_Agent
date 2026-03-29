@@ -1,0 +1,21 @@
+{
+  "date": "2026-01-18",
+  "next_account_index": 1,
+  "accounts": {
+    "gmail_account_1": {
+      "used": 3,
+      "limit": 50,
+      "last_reset": "2026-01-18"
+    },
+    "gmail_account_2": {
+      "used": 2,
+      "limit": 50,
+      "last_reset": "2026-01-18"
+    },
+    "gmail_account_3": {
+      "used": 2,
+      "limit": 50,
+      "last_reset": "2026-01-18"
+    }
+  }
+}
