@@ -1,225 +1,165 @@
-# Instagram Cold Mailer Bot
+<div align="center">
 
-A powerful AI-driven outreach system for Instagram lead generation, email creation, queue management, and multi-account Gmail delivery using Discord slash commands.
+# 🚀 AI Instagram Cold Outreach Bot
 
----
+**An intelligent, scalable, and automated cold email outreach solution powered by AI.**
 
-## Overview
+[![Python Version](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Discord API](https://img.shields.io/badge/Discord-PyCord-5865F2.svg)](https://pycord.dev/)
+[![Google Sheets](https://img.shields.io/badge/Google-Sheets-34A853.svg)](https://developers.google.com/sheets/api)
+[![Powered By AI](https://img.shields.io/badge/Powered_by-AI-FF6F00.svg)]()
 
-This project combines:
-- Instagram profile scraping and insight extraction
-- AI-powered cold email creation and follow-up generation
-- Google Sheets queue management
-- Multi-account Gmail sending
-- Discord slash command orchestration
+<p align="center">
+  Automate your lead generation, scrape Instagram data, generate hyper-personalized AI emails, and seamlessly orchestrate multi-account outreach workflows via Discord.
+</p>
 
-It is designed to automate outreach at scale while preserving configurable rate controls and thread-based follow-ups.
-
----
-
-## Key Features
-
-- Instagram scraping of profile metadata, bio, engagement, and reels
-- AI email generation for initial outreach and follow-ups
-- Queue creation in Google Sheets (`Day1Queue`, `Day2Queue`, etc.)
-- Multi-account Gmail sending with send delay and thread handling
-- Discord interface for remote command control
-- Shared rate limiting and retry handling
-- Configurable Google Sheets and Discord bot settings via `.env`
+</div>
 
 ---
 
-## Architecture
+## 🌟 Key Features
 
-```text
-[Instagram Scraper] ---> [AI Email Generator] ---> [Google Sheets Queue]
-        |                                           |
-        v                                           v
-[Profile Insights]                             [Discord Bot]
-                                                     |
-                                                     v
-                                            [Gmail Multi-Account Sender]
+- **🔍 Smart Instagram Scraping:** Automatically extract metadata, bios, and engagement data from Instagram profiles.
+- **🤖 AI-Powered Personalization:** Generate hyper-personalized cold emails and highly contextual follow-ups using advanced LLMs.
+- **📊 Google Sheets Native:** Manage your entire workflow directly from Google Sheets (`Day1Queue`, `Day2Queue`, etc.).
+- **💌 Multi-Account Sending:** Distribute sending load across multiple Gmail accounts with customizable delays and smart thread handling.
+- **🎮 Discord Orchestration:** Control your entire outreach campaign remotely using convenient Discord slash commands.
+- **🛡️ Built-in Safety Controls:** Shared rate limits, dynamic retry logic, and quota management to protect your sender reputation.
+
+---
+
+## 🏗️ System Architecture
+
+```mermaid
+graph TD
+    A[Instagram Scraper] -->|Extracts Lead Info| B(AI Email Generator)
+    B -->|Personalizes Content| C[(Google Sheets Queue)]
+    C -->|Queues Campaigns| D{Discord Bot Controller}
+    D -->|Executes Dispatch| E[Multi-Account Gmail Sender]
 ```
 
-1. `scrapper.py` reads leads from Google Sheets and extracts Instagram profile data.
-2. Insights are used to generate personalized cold emails and follow-ups.
-3. Generated leads are queued into sheet tabs such as `Day1Queue`.
-4. `main.py` runs the Discord bot that triggers email sends via slash commands.
-5. Gmail accounts send emails with rate limiting and optional reply threading.
+## 📂 Project Structure
+
+```text
+📦 AI-Outreach-Agent
+ ┣ 📂 commands/         # Discord command cogs for outreach workflows
+ ┣ 📂 utils/            # Shared utilities (AI, rate limiting, Google Sheets)
+ ┣ 📂 logs/             # Runtime execution logs and state tracking
+ ┣ 📜 scrapper.py       # Scrapes leads, generates emails, and builds queues
+ ┣ 📜 discord_bot.py    # Core email dispatch and queue processor
+ ┣ 📜 main.py           # Discord Bot launcher and command sync
+ ┣ 📜 verify_setup.py   # Diagnostics and environment validation
+ ┣ 📜 SETUP.md          # Detailed installation and setup guide
+ ┗ 📜 rate_limits.json  # Centralized configuration for quotas/limits
+```
 
 ---
 
-## Folder Structure
+## 💻 Tech Stack
 
-- `main.py` � Discord bot launcher and command sync
-- `scrapper.py` � Instagram scraping, AI email generation, queue creation
-- `discord_bot.py` � email sending, queue processing, bot behaviors
-- `commands/` � Discord command cogs for send and follow-up workflows
-- `utils/` � shared helpers for AI, email handling, rate limiting, Google Sheets, Instagram scraping
-- `logs/` � runtime logs and rate limit state files
-- `rate_limits.json` � configured quotas and limits
-- `SETUP.md` � setup instructions and configuration guidance
-- `verify_setup.py` � local environment verification script
+- **Core:** Python `>= 3.13`
+- **Bot Framework:** `py-cord` / `discord.py`
+- **Database / Queue:** `gspread` + Google Sheets API + `pandas`
+- **AI Integration:** `google-generativeai` / `openai`
+- **Networking:** `requests`, `tenacity` (Dynamic Retries)
+- **Delivery:** Multi-account threaded Gmail dispatch via App Passwords
 
 ---
 
-## Tech Stack
+## 🚀 Quick Start Guide
 
-- Python `>= 3.13`
-- `py-cord` / `discord.py` for Discord bot interactions
-- `python-dotenv` for environment variable loading
-- `gspread` + Google Sheets API for queue/storage
-- `google-generativeai` / `openai` / custom AI integration
-- `pandas` for sheet and queue data handling
-- `requests`, `tenacity` for HTTP and retry logic
-- Multi-account Gmail delivery via app passwords
+### 1. Prerequisites
+- Python 3.13 or higher installed.
+- A Google Cloud Service Account (for Sheets API).
+- A Discord App/Bot token and your Guild ID.
+- API Key(s) for your preferred AI provider (e.g., Gemini / OpenAI).
+- One or more Gmail App Passwords for sending emails.
+- A base Google Sheet configured with a `Leads` tab.
 
----
+### 2. Installation
 
-## Setup
+Clone the repository and install the dependencies:
 
-### Requirements
-
-- Python `3.13+`
-- Google Cloud service account for Sheets API
-- Discord bot token and `MY_GUILD_ID`
-- One or more AI provider API keys
-- One or more Gmail app passwords
-- A Google Sheet with lead/queue tabs
-
-### Install dependencies
-
-```powershell
+```bash
+# Upgrade pip
 python -m pip install --upgrade pip
+
+# Install required packages
 python -m pip install audioop-lts generativeai>=0.0.1 google-generativeai>=0.8.5 gspread openai>=1.104.1 pandas pandas-stubs py-cord python-dotenv requests tenacity>=9.1.2
 ```
 
-There is no `requirements.txt` in this repository, so install packages directly from the dependency list above.
-
-### Configure `.env`
-
-Create a `.env` file in the repository root and add the required keys.
-
-Example values:
+### 3. Configuration
+Create a `.env` file in the root directory. Refer to [SETUP.md](./SETUP.md) for full configuration details.
 
 ```env
-# Discord
-DISCORD_BOT_TOKEN=your_discord_bot_token
-MY_GUILD_ID=your_discord_guild_id
+# Discord Settings
+DISCORD_BOT_TOKEN=your_bot_token
+MY_GUILD_ID=your_guild_id
 
-# Google Sheets
-GOOGLE_SHEETS_SPREADSHEET_ID=your_spreadsheet_id
+# Google Sheets Configuration
+GOOGLE_SHEETS_SPREADSHEET_ID=your_sheet_id
 GOOGLE_SHEETS_TYPE=service_account
-GOOGLE_SHEETS_PROJECT_ID=...
-GOOGLE_SHEETS_PRIVATE_KEY_ID=...
-GOOGLE_SHEETS_PRIVATE_KEY=...
-GOOGLE_SHEETS_CLIENT_EMAIL=...
-GOOGLE_SHEETS_CLIENT_ID=...
-GOOGLE_SHEETS_CLIENT_X509_CERT_URL=...
+# Add the remaining Google service account fields here...
 
-# AI Provider
-AI_PROVIDER=gemini
-GEMINI_API_KEY_1=...
-GEMINI_API_KEY_2=...
-# ... additional AI keys as needed
+# AI Provider Keys
+AI_PROVIDER=gemini # or openai
+GEMINI_API_KEY_1=your_ai_key
+# Add more keys to enable rotation...
 
-# Gmail accounts
-EMAIL_ADDRESS_1=...
-EMAIL_PASSWORD_1=...
-EMAIL_ADDRESS_2=...
-EMAIL_PASSWORD_2=...
-
-# Optional settings
-META_TOKEN=...
-META_PAGE_ID=...
-META_APP_ID=...
-META_APP_SECRET=...
+# Email Sender Config
+EMAIL_ADDRESS_1=sender1@gmail.com
+EMAIL_PASSWORD_1=app_password_1
+# Add more accounts for scale...
 ```
 
-Keep `service_account.json` and all secrets out of Git. This repository already ignores `service_account.json`.
+*⚠️ Ensure you NEVER commit your `.env` or `service_account.json` files to version control.*
 
 ---
 
-## Running the Project
+## 🕹️ Usage & Workflow
 
-### Start the Discord bot
+**1. Data Collection & Email Generation**
+Add your target Instagram URLs or handles to the `Leads` sheet. Then run the scraper compiler:
+```bash
+python scrapper.py
+```
+*(This will fetch profiles, draft personalized emails, and populate your queue tabs like `Day1Queue`)*
 
-```powershell
+**2. Launch the Orchestrator Bot**
+Start the Discord command interface:
+```bash
 python main.py
 ```
 
-The bot will sync slash commands to the configured guild and print the available commands.
+**3. Dispatch Campaigns via Discord**
+Use intuitive slash commands within your Discord server to launch and control campaigns:
+- **Send Initial Pitch:** `/send queue:Day1Queue count:100 delay:5`
+- **Send Follow-ups:** `/sendfollow queue:Day1Queue followup:1 count:50 delay:5`
 
-### Run the Instagram scraper / email generator
-
-```powershell
-python scrapper.py
-```
-
-Follow the prompts to:
-- connect to Google Sheets
-- scrape Instagram leads
-- generate AI emails
-- create queue tabs such as `Day1Queue`
-
-### Send emails from Discord
-
-Use the bot slash commands in your guild.
-
-Example:
-- `/send queue:Day1Queue count:100 delay:5`
-- `/sendfollow queue:Day1Queue followup:1 count:50 delay:5`
+Monitor logs and quota usage directly inside the `/logs` directory.
 
 ---
 
-## Workflow Summary
+## 🤝 Contributing
 
-1. Add Instagram lead URLs or handles to the `Leads` sheet.
-2. Run `python scrapper.py` to fetch profiles and generate emails.
-3. Use Discord to send initial outreach with `/send`.
-4. Schedule follow-ups using `/sendfollow`.
-5. Monitor rate usage and logs in the `logs/` folder.
+We welcome contributions to make this bot more robust and feature-rich! 
 
----
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. Open a **Pull Request**
 
-## Collaboration
-
-This project is open to collaboration.
-
-If you want to contribute:
-- open an issue with a feature request or bug report
-- submit a pull request with improvements
-- add tests or documentation updates
-- help simplify setup and reliability
-
-### How to contribute
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Open a PR with a clear description
-
-I�m happy to collaborate on improvements, better installation docs, and stronger email delivery handling.
+*We are particularly looking for help with test coverage, expanded AI integrations, and advanced delivery strategies.*
 
 ---
 
-## Important Notes
+## 📝 Important Disclaimer
 
-- Use this system responsibly and in compliance with anti-spam laws.
-- Do not commit API keys, service account credentials, or Gmail passwords.
-- Store secrets in `.env` or an external secrets manager.
+**Use Responsibly:** This tool is designed for B2B outreach and networking. Users are strictly responsible for complying with the CAN-SPAM Act, GDPR, and all applicable anti-spam laws in their respective jurisdictions. Do not spam.
 
 ---
-
-## Additional Files
-
-- `SETUP.md` � deeper setup notes for keys and accounts
-- `verify_setup.py` � environment validation helper
-- `rate_limits.json` � configured quotas and limits
-
----
-
-## Contact
-
-If you want to collaborate, improve the system, or add automation features, feel free to open an issue or PR.
-
+<div align="center">
+  <i>Built with ❤️ for automated, high-quality outreach.</i>
+</div>
