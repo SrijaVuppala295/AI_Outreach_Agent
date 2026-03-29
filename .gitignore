@@ -55,3 +55,5 @@ uv.lock
 /resources/prompt.txt
 
 logs/rate_limiter_state.json
+
+service_account.json
