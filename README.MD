@@ -4,7 +4,7 @@ A powerful AI-driven outreach system for Instagram lead generation, email creati
 
 ---
 
-## ?? Overview
+## Overview
 
 This project combines:
 - Instagram profile scraping and insight extraction
@@ -17,7 +17,7 @@ It is designed to automate outreach at scale while preserving configurable rate 
 
 ---
 
-## ? Key Features
+## Key Features
 
 - Instagram scraping of profile metadata, bio, engagement, and reels
 - AI email generation for initial outreach and follow-ups
@@ -29,7 +29,7 @@ It is designed to automate outreach at scale while preserving configurable rate 
 
 ---
 
-## ?? Architecture
+## Architecture
 
 ```text
 [Instagram Scraper] ---> [AI Email Generator] ---> [Google Sheets Queue]
@@ -49,7 +49,7 @@ It is designed to automate outreach at scale while preserving configurable rate 
 
 ---
 
-## ?? Folder Structure
+## Folder Structure
 
 - `main.py` — Discord bot launcher and command sync
 - `scrapper.py` — Instagram scraping, AI email generation, queue creation
@@ -57,13 +57,13 @@ It is designed to automate outreach at scale while preserving configurable rate 
 - `commands/` — Discord command cogs for send and follow-up workflows
 - `utils/` — shared helpers for AI, email handling, rate limiting, Google Sheets, Instagram scraping
 - `logs/` — runtime logs and rate limit state files
-- `rate_limits.json` — configured SMS/email limit data
+- `rate_limits.json` — configured quotas and limits
 - `SETUP.md` — setup instructions and configuration guidance
 - `verify_setup.py` — local environment verification script
 
 ---
 
-## ??? Tech Stack
+## Tech Stack
 
 - Python `>= 3.13`
 - `py-cord` / `discord.py` for Discord bot interactions
@@ -76,7 +76,7 @@ It is designed to automate outreach at scale while preserving configurable rate 
 
 ---
 
-## ? Setup
+## Setup
 
 ### Requirements
 
@@ -94,9 +94,10 @@ python -m pip install --upgrade pip
 python -m pip install audioop-lts generativeai>=0.0.1 google-generativeai>=0.8.5 gspread openai>=1.104.1 pandas pandas-stubs py-cord python-dotenv requests tenacity>=9.1.2
 ```
 
-> There is no `requirements.txt` in this repository, so install packages directly from the dependency list above.
+There is no `requirements.txt` in this repository, so install packages directly from the dependency list above.
 
 ### Configure `.env`
+
 Create a `.env` file in the repository root and add the required keys.
 
 Example values:
@@ -135,11 +136,11 @@ META_APP_ID=...
 META_APP_SECRET=...
 ```
 
-> Keep `service_account.json` and all secrets out of Git. This repository already ignores `service_account.json`.
+Keep `service_account.json` and all secrets out of Git. This repository already ignores `service_account.json`.
 
 ---
 
-## ?? Running the Project
+## Running the Project
 
 ### Start the Discord bot
 
@@ -171,7 +172,7 @@ Example:
 
 ---
 
-## ?? Workflow Summary
+## Workflow Summary
 
 1. Add Instagram lead URLs or handles to the `Leads` sheet.
 2. Run `python scrapper.py` to fetch profiles and generate emails.
@@ -181,7 +182,7 @@ Example:
 
 ---
 
-## ?? Collaboration
+## Collaboration
 
 This project is open to collaboration.
 
@@ -202,7 +203,7 @@ I’m happy to collaborate on improvements, better installation docs, and stronger
 
 ---
 
-## ?? Important Notes
+## Important Notes
 
 - Use this system responsibly and in compliance with anti-spam laws.
 - Do not commit API keys, service account credentials, or Gmail passwords.
@@ -210,7 +211,7 @@ I’m happy to collaborate on improvements, better installation docs, and stronger
 
 ---
 
-## ?? Additional Files
+## Additional Files
 
 - `SETUP.md` — deeper setup notes for keys and accounts
 - `verify_setup.py` — environment validation helper
@@ -218,7 +219,7 @@ I’m happy to collaborate on improvements, better installation docs, and stronger
 
 ---
 
-## ?? Contact
+## Contact
 
 If you want to collaborate, improve the system, or add automation features, feel free to open an issue or PR.
 
